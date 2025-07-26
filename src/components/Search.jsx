@@ -5,16 +5,16 @@ const Search = ({ onAddToCart }) => {
 
   return (
     <div className="border p-4">
-      <h2 className="text-xl font-bold mb-2">🔍 Search Products</h2>
-      <ul>
+      <h2 className="text-xl font-bold mb-4">🔍 Search Products</h2>
+      <ul style={{ listStyle: 'none', padding: 0 }}>
         {products.map((product) => (
-          <li key={product} className="my-1">
-            {product}
+          <li key={product} className="my-1 product-list-item">
+            <span className="product-name">{product}</span>
             <button
-              className="ml-4 px-2 py-1 bg-blue-500 text-white rounded"
+              className="add-btn"
               onClick={() => onAddToCart(product)}
             >
-              Add to Cart
+              <span role="img" aria-label="cart">🛒</span> Add to Cart
             </button>
           </li>
         ))}

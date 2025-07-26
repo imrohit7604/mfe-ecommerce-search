@@ -1,0 +1,77 @@
+.border {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #f9fafb;
+}
+
+.text-xl {
+  color: #2563eb;
+}
+
+.my-1 {
+  margin: 0.5rem 0;
+}
+
+.product-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  margin-bottom: 0.5rem;
+  transition: box-shadow 0.2s;
+}
+.product-list-item:hover {
+  box-shadow: 0 2px 8px rgba(37,99,235,0.10);
+}
+.product-name {
+  font-weight: 500;
+  color: #374151;
+}
+.add-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(90deg, #2563eb 60%, #60a5fa 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(37,99,235,0.10);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.add-btn:hover {
+  background: linear-gradient(90deg, #1d4ed8 60%, #2563eb 100%);
+  box-shadow: 0 2px 8px rgba(37,99,235,0.18);
+}
+
+.bg-blue-500 {
+  background: #2563eb;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.rounded {
+  border-radius: 6px;
+}
+
+.ml-4 {
+  margin-left: 1rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
