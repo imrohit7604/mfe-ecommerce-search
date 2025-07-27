@@ -10,7 +10,7 @@ module.exports = {
     historyApiFallback: true,
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "public"),
     filename: "main.[contenthash].js",
     publicPath: "/",
     clean: true,
@@ -41,7 +41,7 @@ module.exports = {
       shared: { react: { singleton: true }, "react-dom": { singleton: true } },
     }),
     new HtmlWebpackPlugin({
-      template: "./dist/index.html",
+      template: "./public/index.html",
       inject: "body",
     }),
   ],
