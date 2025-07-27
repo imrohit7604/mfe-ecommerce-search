@@ -1,7 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const path = require("path");
-
+const Dotenv = require('dotenv-webpack');
 module.exports = {
   entry: "./src/index.js",
   mode: "development",
@@ -12,7 +12,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "public"),
     filename: "main.[contenthash].js",
-    publicPath: "/",
+    publicPath: process.env.PUBLIC_PATH,
     clean: true,
   },
   resolve: {
@@ -32,6 +32,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new Dotenv(),
     new ModuleFederationPlugin({
       name: "search",
       filename: "remoteEntry.js",
