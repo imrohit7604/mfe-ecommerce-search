@@ -1,45 +1,48 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
-const path = require('path');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
+const path = require("path");
 
 module.exports = {
-  entry: './src/index.js',
-  mode: 'development',
+  entry: "./src/index.js",
+  mode: "development",
   devServer: {
     port: 3001,
     historyApiFallback: true,
   },
   output: {
-    publicPath: 'auto',
+    path: path.resolve(__dirname, "dist"),
+    filename: "main.[contenthash].js",
+    publicPath: "/",
     clean: true,
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: [".js", ".jsx"],
   },
   module: {
     rules: [
       {
         test: /\.jsx?$/,
-        loader: 'babel-loader',
+        loader: "babel-loader",
         exclude: /node_modules/,
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
+        use: ["style-loader", "css-loader"],
       },
     ],
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'search',
-      filename: 'remoteEntry.js',
+      name: "search",
+      filename: "remoteEntry.js",
       exposes: {
-        './Search': './src/components/Search',
+        "./Search": "./src/components/Search",
       },
-      shared: { react: { singleton: true }, 'react-dom': { singleton: true } },
+      shared: { react: { singleton: true }, "react-dom": { singleton: true } },
     }),
     new HtmlWebpackPlugin({
-      template: './public/index.html',
+      template: "./public/index.html",
+      inject: "body",
     }),
   ],
 };
