@@ -1,0 +1,84 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f1f5f9;
+  margin: 0;
+}
+
+.p-4 {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 2rem;
+}
+
+.text-2xl {
+  color: #2563eb;
+}
+
+h1 {
+  letter-spacing: 1px;
+}
+
+.search-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.search-title {
+  color: #1e293b; /* A darker gray */
+  font-size: 1.5rem; /* 24px */
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.product-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid #f1f5f9;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.product-item:last-child {
+  border-bottom: none;
+}
+
+.product-item:hover {
+  background-color: #f8fafc;
+  border-radius: 8px;
+}
+
+.product-item .product-name {
+  color: #334155;
+  font-weight: 500;
+}
+
+.add-to-cart-btn {
+  background-color: #3b82f6; /* A nice blue */
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px; /* pill shape */
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #2563eb; /* Darker blue on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}

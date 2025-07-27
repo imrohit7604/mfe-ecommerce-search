@@ -1,20 +1,20 @@
 import React from 'react';
-
+import "./Search.css";
 const Search = ({ onAddToCart }) => {
   const products = ['Shoes', 'Hat', 'Watch'];
 
   return (
-    <div className="border p-4">
-      <h2 className="text-xl font-bold mb-4">🔍 Search Products</h2>
-      <ul style={{ listStyle: 'none', padding: 0 }}>
+    <div className="search-container">
+      <h2 className="search-title">🔍 Search Products</h2>
+      <ul className="product-list">
         {products.map((product) => (
-          <li key={product} className="my-1 product-list-item">
+          <li key={product} className="product-item">
             <span className="product-name">{product}</span>
             <button
-              className="add-btn"
+              className="add-to-cart-btn"
               onClick={() => onAddToCart(product)}
             >
-              <span role="img" aria-label="cart">🛒</span> Add to Cart
+              <span className="cart-icon" role="img" aria-label="cart"></span> Add to Cart
             </button>
           </li>
         ))}
